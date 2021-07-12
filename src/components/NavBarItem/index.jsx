@@ -1,6 +1,4 @@
-import React from 'react'
-
-import './NavBarItem.css'
+import './index.css'
 
 const NavBarItem = ({nombre}) => {
     return (

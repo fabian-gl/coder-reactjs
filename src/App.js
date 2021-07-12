@@ -1,14 +1,16 @@
-import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/NavBar';
+import DummyParagraph from './components/DummyParagraph';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <p className='espaciado-grande'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique distinctio iste sed unde quidem doloremque magnam sit aliquid, quasi deleniti esse nesciunt, ratione non molestias excepturi modi quos enim consequatur officia dignissimos fuga quia. Neque itaque autem illum minus quis!</p>
-      <p className='espaciado-grande'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique distinctio iste sed unde quidem doloremque magnam sit aliquid, quasi deleniti esse nesciunt, ratione non molestias excepturi modi quos enim consequatur officia dignissimos fuga quia. Neque itaque autem illum minus quis!</p>
-      <p className='espaciado-grande'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique distinctio iste sed unde quidem doloremque magnam sit aliquid, quasi deleniti esse nesciunt, ratione non molestias excepturi modi quos enim consequatur officia dignissimos fuga quia. Neque itaque autem illum minus quis!</p>
-      <p className='espaciado-grande'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique distinctio iste sed unde quidem doloremque magnam sit aliquid, quasi deleniti esse nesciunt, ratione non molestias excepturi modi quos enim consequatur officia dignissimos fuga quia. Neque itaque autem illum minus quis!</p>
-      <p className='espaciado-grande'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique distinctio iste sed unde quidem doloremque magnam sit aliquid, quasi deleniti esse nesciunt, ratione non molestias excepturi modi quos enim consequatur officia dignissimos fuga quia. Neque itaque autem illum minus quis!</p>
+      <ItemListContainer greeting='Hola, mundo!'/>
+      <DummyParagraph/>
+      <DummyParagraph/>
+      <DummyParagraph/>
+      <DummyParagraph/>
     </div>
   );
 }

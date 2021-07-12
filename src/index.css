@@ -1,5 +1,6 @@
 :root {
   --navbar-height: 13vh;
+  --navbar-color: #bbb;
 }
 
 * {
@@ -11,9 +12,4 @@
 body {
   background: #eee;
   padding-top: var(--navbar-height);
-}
-
-.espaciado-grande {
-  font-size: 5vh;
-  margin: 5vh;
 }
