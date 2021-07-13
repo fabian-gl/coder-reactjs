@@ -1,0 +1,20 @@
+.saludo {
+    text-align: center;
+    text-shadow: #aaa 4px 2px 1px;
+    padding: 2vh 0;
+}
+
+.cont-prueba {
+    background: grey;
+    width: 20vw;
+    height: 20vh;
+    padding: 2vh;
+    border-radius: 2vh;
+}
+
+.centra-elementos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,7 +1,7 @@
-import './index.css'
+import './CartWidget.css'
 import cartIcon from '../../assets/icon-cart.png'
 
-const index = () => {
+const CartWidget = () => {
     const numItems = 10
     return (
         <div className='cont-cart'>
@@ -13,4 +13,4 @@ const index = () => {
     )
 }
 
-export default index
+export default CartWidget

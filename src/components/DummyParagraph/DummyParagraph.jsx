@@ -1,4 +1,4 @@
-import './index.css'
+import './DummyParagraph.css'
 
 const DummyParagraph = () => {
     return (

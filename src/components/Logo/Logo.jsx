@@ -1,7 +1,7 @@
-import './index.css'
+import './Logo.css'
 import logoImg from '../../assets/icon-lampara.png'
 
-const index = () => {
+const Logo = () => {
     return (
         <div className='cont-logo'>
             <img src={logoImg} alt="Sonora Logo" />
@@ -10,4 +10,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Logo
