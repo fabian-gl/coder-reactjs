@@ -1,0 +1,23 @@
+[
+    {
+      "id": "1",
+      "title": "Guitarra eléctrica",
+      "description": "Ideal para metal y rock pesado, necesita un amplificador.",
+      "price": "355",
+      "pictureUrl": "guitarra-electrica.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Guitarra acústica",
+      "description": "Sonido limpio y metálico, tiene un buen volúmen incluso sin micrófono.",
+      "price": "419",
+      "pictureUrl": "guitarra-acustica.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Guitarra criolla",
+      "description": "Ideal para música clásica y folclore.",
+      "price": "322",
+      "pictureUrl": "guitarra-clasica.jpg"
+    }
+]

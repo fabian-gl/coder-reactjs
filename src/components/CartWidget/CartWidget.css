@@ -5,6 +5,9 @@
     width: 15vh;
     padding: 2vh;
     cursor: pointer;
+    background: grey;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
 }
 
 .cont-cart img {

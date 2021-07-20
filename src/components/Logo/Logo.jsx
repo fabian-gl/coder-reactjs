@@ -1,11 +1,11 @@
 import './Logo.css'
-import logoImg from '../../assets/icon-lampara.png'
+import logoImg from '../../assets/icon-musica.png'
 
 const Logo = () => {
     return (
         <div className='cont-logo'>
             <img src={logoImg} alt="Sonora Logo" />
-            <h2>Sonora</h2>
+            <h2>SONORA</h2>
         </div>
     )
 }

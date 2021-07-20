@@ -1,8 +1,8 @@
 
 .cont-item {
     background: grey;
-    width: 25vw;
-    height: 50vh;
+    width: 20vw;
+    height: 40vh;
     padding: 2vh;
     margin: 2vh;
     border-radius: 2vh;
@@ -15,10 +15,13 @@
 
 .cont-item .titulo {
     color: white;
+    font-family: Poppins, sans-serif;
+    font-weight: normal;
+    font-size: 3.5vh;
 }
 
 .cont-item .cont-img {
-    height: 50%;
+    height: 60%;
     width: 100%;
     margin: 1vh 0;
 }
@@ -30,7 +33,6 @@
 }
 
 .cont-item .precio {
-    font-weight: bold;
     font-size: 4vh;
     color: white;
 }

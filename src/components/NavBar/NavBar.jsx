@@ -5,7 +5,7 @@ import Logo from '../Logo/Logo'
 import CartWidget from '../CartWidget/CartWidget'
 
 const NavBar = () => {
-    const menu = ['Prueba 1', 'Prueba 2', 'Prueba 3' , 'Prueba 4']
+    const menu = ['PRUEBA 1', 'PRUEBA 2', 'PRUEBA 3' , 'PRUEBA 4']
 
     const toggleMenuCelu = () => document.querySelector('.menu-celu').classList.toggle('oculto')
 

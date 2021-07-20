@@ -3,9 +3,9 @@
   "name": "My personal ecommerce",
   "icons": [
     {
-      "src": "icon-lampara.png",
+      "src": "icon-musica.png",
       "type": "image/png",
-      "sizes": "507x607"
+      "sizes": "285x178"
     }
   ],
   "start_url": ".",

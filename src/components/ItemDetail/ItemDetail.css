@@ -1,0 +1,78 @@
+
+
+.cont-item-detail {
+    background: grey;
+    width: 60vw;
+    height: 70vh;
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cont-item-detail .titulo {
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    font-size: 4.5vh;
+}
+
+.cont-interno {
+    width: 100%;
+    height: 90%;
+    padding: 2vh 0 1vh 0;
+    display: flex;
+}
+
+.cont-interno .descripcion {
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-weight: normal;
+    font-size: 3.5vh;
+}
+
+.cont-item-detail .cont-interno .cont-img {
+    height: 100%;
+    width: 60%;
+    margin: 1vh 0;
+}
+
+.cont-item-detail .cont-interno .cont-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cont-item-detail .cont-interno .cont-info-contador {
+    height: 100%;
+    width: 40%;
+    padding: 2vh 2vh 0 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.cont-item-detail .cont-interno .cont-info-contador .cont-precio-contador {
+    height: 35%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cont-item-detail .precio {
+    font-size: 4vh;
+    color: white;
+}
+
+
+.cont-item-detail .description {
+    font-size: 4vh;
+    color: white;
+}
