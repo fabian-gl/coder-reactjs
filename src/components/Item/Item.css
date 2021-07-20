@@ -1,0 +1,36 @@
+
+.cont-item {
+    background: grey;
+    width: 25vw;
+    height: 50vh;
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cont-item .titulo {
+    color: white;
+}
+
+.cont-item .cont-img {
+    height: 50%;
+    width: 100%;
+    margin: 1vh 0;
+}
+
+.cont-item .cont-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cont-item .precio {
+    font-weight: bold;
+    font-size: 4vh;
+    color: white;
+}
