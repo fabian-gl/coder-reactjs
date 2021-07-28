@@ -34,4 +34,4 @@ Se usa react-router-dom para la navegación. Se decide no usar una librería par
 
 ## Sonora en funcionamiento
 
-Descargar gif: [https://github.com/fabian-gl/coder-reactjs/blob/master/gif-funcionamiento/SONORA%20-%20Tienda%20de%20Musica.gif](Sonora - Tienda de Música).
+Descargar gif: [Sonora - Tienda de Música](https://github.com/fabian-gl/coder-reactjs/blob/master/gif-funcionamiento/SONORA%20-%20Tienda%20de%20Musica.gif)
