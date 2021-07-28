@@ -5,11 +5,9 @@ import ItemList from '../ItemList/ItemList';
 const index = ({greeting}) => {
 
     return (
-        <div className='centra-elementos'>
-            <h1 className='saludo'>{greeting}</h1>
-            <div className="cont-prueba">
-                <ItemList />
-            </div>
+        <div className='cont-item-list-container'>
+            <h1 className='greeting'>{greeting}</h1>
+            <ItemList />
         </div>
     )
 }

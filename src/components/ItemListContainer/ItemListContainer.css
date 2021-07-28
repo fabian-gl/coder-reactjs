@@ -1,12 +1,13 @@
-.saludo {
-    text-align: center;
-    text-shadow: #aaa 4px 2px 1px;
-    padding: 2vh 0;
-}
 
-.centra-elementos {
+.cont-item-list-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.cont-item-list-container .greeting {
+    text-align: center;
+    text-shadow: #aaa 4px 2px 1px;
+    padding: 2vh 0;
 }

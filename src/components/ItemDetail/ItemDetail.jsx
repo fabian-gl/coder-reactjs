@@ -1,7 +1,6 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount';
 
-
 const ItemDetail = ({id, title, description, price, pictureUrl}) => {
     const rootUrl = window.location.origin
     const rutaImagen = `${rootUrl}/product-pictures/${pictureUrl}`

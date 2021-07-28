@@ -1,0 +1,23 @@
+.cont-spinner {
+    position: absolute;
+    top: 42vh;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont-spinner .spinner {
+    border: 2vh solid grey;
+    border-radius: 50%;
+    border-top: 2vh solid black;
+    width: 16vh;
+    height: 16vh;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
