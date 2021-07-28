@@ -4,15 +4,15 @@ E-commerce de instrumentos musicales
 
 El proyecto se inició con create-react-app
 
-## Levantando el pryecto
+## Levantando el proyecto
 
 Primero debes bajar los archivos a tu disco local (realizando fork y clone)
 
-Una vez que tenas los archivos en tu máquina, debes ejecutar
+Una vez que tenas los archivos en tu máquina, para instalar las dependecias, debes ejecutar
 
 ### `npm install`
 
-Desde la terminal, dentro de la carpeta "liuni-ecommerce" ejecutar el script
+Desde la terminal, dentro de la carpeta raíz del proyecto ejecutar el script
 
 ### `npm start`
 
@@ -22,7 +22,7 @@ Eso ejecuta la app en: [http://localhost:3000](http://localhost:3000) visible de
 
 ### `npm run build`
 
-Genera todos los archivos estáticos en la carpeta "build" y eso se puede subir a cualquier hosting
+Genera todos los archivos estáticos en la carpeta "build" y al subir el contenido de la carpeta a un hosting, el proyecto quedará funcionando en la web.
 
 ## Dependencias
 
