@@ -20,7 +20,7 @@ const ItemDetail = ({id, title, description, price, pictureUrl}) => {
     }
 
     const terminaLaCompra = () => {
-        addItem(id, cantidadAComprar)
+        addItem(id, title, cantidadAComprar)
         history.push('/cart')
     }
 

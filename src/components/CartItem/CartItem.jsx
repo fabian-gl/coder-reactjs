@@ -1,10 +1,16 @@
 import './CartItem.css'
 
-const CartItem = ({id, cantidad}) => {
+import { useCartContext } from '../../context/CartContext'
+
+
+const CartItem = ({id, title, cantidad}) => {
+    const { deleteItem } = useCartContext();
+
     return (
         <div className='cont-cart-item'>
-            <div>{id}</div>
+            <div>{title}</div>
             <div>{cantidad}</div>
+            <div className='btn-delete-item' onClick={() => deleteItem(id)}>&#10006;</div>
         </div>
     )
 }

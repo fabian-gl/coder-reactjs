@@ -5,9 +5,9 @@ const CartContext = createContext();
 export const useCartContext = () => useContext(CartContext);
 
 const CartContextProvider = ({ children }) => {
-    const [cartItems, setCartItems] = useState([{id:1, cantidad: 5}]);
+    const [cartItems, setCartItems] = useState([]);
 
-    const addItem = (id, cantidad) => {
+    const addItem = (id, title, cantidad) => {
         const idNumber = parseInt(id)
 
         const indexFound = cartItems.findIndex(elem => elem.id === idNumber)
@@ -18,14 +18,19 @@ const CartContextProvider = ({ children }) => {
             cartItemsUpdated[indexFound].cantidad += cantidad
             setCartItems(cartItemsUpdated)
         }
-        else setCartItems([...cartItems, {id: parseInt(id), cantidad: parseInt(cantidad)}])
+        else setCartItems([...cartItems, {id: parseInt(id), title, cantidad: parseInt(cantidad)}])
+    }
+
+    const deleteItem = id => {
+        setCartItems(cartItems.filter(cartItem => cartItem.id !== id))
     }
 
     return (
         <CartContext.Provider
             value={{
                 cartItems,
-                addItem
+                addItem,
+                deleteItem
             }}>
             {children}
         </CartContext.Provider>

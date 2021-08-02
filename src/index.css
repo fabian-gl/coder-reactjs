@@ -50,6 +50,9 @@ body, html {
 
 .cont-app {
   width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* padding-right: 15px; */
 }
 
