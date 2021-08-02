@@ -17,10 +17,10 @@ const ItemDetail = ({id, title, description, price, pictureUrl}) => {
 
     const agregaAlCarrito = cantidad => {
         setCantidadAComprar(cantidad)
+        addItem(id, title, cantidad)
     }
 
     const terminaLaCompra = () => {
-        addItem(id, title, cantidadAComprar)
         history.push('/cart')
     }
 

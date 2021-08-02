@@ -1,9 +1,13 @@
 import './CartWidget.css'
 import cartIcon from '../../assets/icon-cart.png'
+import { useCartContext } from '../../context/CartContext'
 
 import { Link } from 'react-router-dom'
+
 const CartWidget = () => {
-    const numItems = 10
+    const { cartItems } = useCartContext();
+
+    const numItems = cartItems.reduce((acum, act) => acum + act.cantidad, 0)
     return (
         <Link to='/cart'>
             <div className='cont-cart'>
