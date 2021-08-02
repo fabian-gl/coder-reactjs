@@ -61,8 +61,8 @@
     flex-wrap: nowrap;
 }
 
-.cont-navbar .cont-botones .nav-item-selected {
-    color: rgb(247, 108, 108);
+.cont-navbar .navbar-item-celu {
+    width: 100%;
 }
 
 

@@ -1,12 +1,27 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount';
 
+import { useCartContext } from '../../context/CartContext'
+
+import { useState } from 'react';
+import { useHistory } from 'react-router';
+
 const ItemDetail = ({id, title, description, price, pictureUrl}) => {
+    const history = useHistory()
+
     const rootUrl = window.location.origin
     const rutaImagen = `${rootUrl}/product-pictures/${pictureUrl}`
+    const { addItem } = useCartContext();
+
+    const [cantidadAComprar, setCantidadAComprar] = useState(0)
 
     const agregaAlCarrito = cantidad => {
-        alert(`Se agregan ${cantidad} items al carrito`)
+        setCantidadAComprar(cantidad)
+    }
+
+    const terminaLaCompra = () => {
+        addItem(id, cantidadAComprar)
+        history.push('/cart')
     }
 
     return (
@@ -20,7 +35,13 @@ const ItemDetail = ({id, title, description, price, pictureUrl}) => {
                     <p className="descripcion">{description}</p>
                     <div className="cont-precio-contador">
                         <p className='precio'>${price}</p>
-                        <ItemCount stock={4} onAdd={agregaAlCarrito}/>
+
+                        {( cantidadAComprar ?
+                            <button onClick={terminaLaCompra}>Terminar la compra</button>
+                        : 
+                            <ItemCount stock={4} onAdd={agregaAlCarrito}/>
+                        )}
+                        
                     </div>
                 </div>
             </div>

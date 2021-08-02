@@ -1,12 +1,10 @@
 import './NavBarItem.css'
 
 import { NavLink } from 'react-router-dom'
-const NavBarItem = ({nombre}) => {
+const NavBarItem = ({nombre, onClick}) => {
     return (
-        <NavLink activeClassName='nav-item-selected' className='no-decoration' to={`/category/${nombre.toLowerCase()}`}>
-            <div className="boton-navbar">
-                {nombre}
-            </div>
+        <NavLink onClick={onClick} activeClassName='selected' className='boton-navbar no-decoration' to={`/category/${nombre.toLowerCase()}`}>
+            {nombre}
         </NavLink>
     )
 }
