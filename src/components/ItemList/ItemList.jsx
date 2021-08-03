@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { useAppContext } from '../../context/AppContext'
@@ -11,20 +11,32 @@ import NotFound from '../NotFound/NotFound'
 
 const ItemList = () => {
 
-    const { productosFiltrados, getProductosFiltrados, loading, sinResultados } = useAppContext();
+    const { productos, getAllProducts, loading } = useAppContext();
+    const [listaFiltrada, setListaFiltrada] = useState([])
 
     let { categoryid } = useParams()
 
-    useEffect( () => {
-        getProductosFiltrados(categoryid)
+    useEffect(() => {
+        getAllProducts()
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[categoryid])
+    }, [])
+
+
+    useEffect( () => {
+        filtrarResultados()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[categoryid, productos])
+
+    const filtrarResultados = () => {
+        if (categoryid) setListaFiltrada(productos.filter(producto => producto.category === categoryid))
+        else setListaFiltrada(productos)
+    }
 
     return (
         <div className='cont-item-list'>
             {loading && <Spinner />}
-            {sinResultados && <NotFound message='No hay productos que mostrar' />}
-            {productosFiltrados.length !== 0 && productosFiltrados.map(producto => <Item key={producto.id} {...producto} />)}
+            {(!listaFiltrada.length && !loading) && <NotFound message='No hay productos que mostrar' />}
+            {listaFiltrada.length !== 0 && listaFiltrada.map(producto => <Item key={producto.id} {...producto} />)}
         </div>
     )
 }

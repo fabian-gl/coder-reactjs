@@ -17,7 +17,7 @@ const ItemDetail = ({id, title, description, price, pictureUrl}) => {
 
     const agregaAlCarrito = cantidad => {
         setCantidadAComprar(cantidad)
-        addItem(id, title, cantidad)
+        addItem(id, cantidad)
     }
 
     const terminaLaCompra = () => {

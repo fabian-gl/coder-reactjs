@@ -1,8 +1,8 @@
 .cont-not-found {
+    position: fixed;
     left: 30vw;
     width: 40vw;
     height: 50vh;
-    position: absolute;
 }
 
 @media (max-width: 1000px) {

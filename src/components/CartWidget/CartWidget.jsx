@@ -10,12 +10,14 @@ const CartWidget = () => {
     const numItems = cartItems.reduce((acum, act) => acum + act.cantidad, 0)
     return (
         <Link to='/cart'>
+            {numItems !== 0 &&
             <div className='cont-cart'>
                 <img src={cartIcon} alt="" />
                 <div>
                     <p>{numItems}</p>
                 </div>
             </div>
+            }
         </Link>
     )
 }
