@@ -1,6 +1,5 @@
 import { getFirestoreConnection } from '../firebase/config';
 
-
 export const getProductsByCategory = category => {
     return new Promise((resolve, reject) => {
         const conn = getFirestoreConnection()
@@ -37,10 +36,10 @@ export const getProducts = () => {
     })
 }
 
-export const uploadJsonToFirebase = (arrayOfProductObjects) => {
+export const uploadJsonToFirebase = (arrayOfObjects) => {
     const conn = getFirestoreConnection()
 
-    for (const producto of arrayOfProductObjects)
+    for (const producto of arrayOfObjects)
     {
         conn.collection('store').doc().set({
             title: producto.title,

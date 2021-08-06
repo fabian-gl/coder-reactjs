@@ -1,12 +1,10 @@
 import React, { createContext, useContext, useState } from 'react';
-import { useAppContext } from './AppContext'
 
 const CartContext = createContext();
 
 export const useCartContext = () => useContext(CartContext);
 
 const CartContextProvider = ({ children }) => {
-    const { productos } = useAppContext();
 
     const [cartItems, setCartItems] = useState([]);
 
@@ -20,12 +18,10 @@ const CartContextProvider = ({ children }) => {
             cartItemsUpdated[indexFound].cantidad += producto.cantidad
             setCartItems(cartItemsUpdated)
         }
-        else setCartItems([...cartItems, {...producto, cantidad: parseInt(producto.cantidad)}])
+        else setCartItems([...cartItems, {...producto}])
     }
 
-    const deleteItem = id => {
-        setCartItems(cartItems.filter(cartItem => cartItem.id !== id))
-    }
+    const deleteItem = id => setCartItems(cartItems.filter(cartItem => cartItem.id !== id))
 
     return (
         <CartContext.Provider

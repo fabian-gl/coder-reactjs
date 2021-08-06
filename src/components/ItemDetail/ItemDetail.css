@@ -1,7 +1,7 @@
 
-
 .cont-item-detail {
-    background: grey;
+    background: var(--cards-background);
+    color: var(--cards-text);
     width: 60vw;
     height: 70vh;
     padding: 2vh;
@@ -13,27 +13,7 @@
     text-align: center;
 }
 
-/* Media queries */
-@media (max-width: 1100px) {
-    .cont-item-detail {
-        width: 70vw;
-    }
-}
-@media (max-width: 750px) {
-    .cont-item-detail {
-        width: 80vw;
-        padding: 1vh;
-    }
-}
-@media (max-width: 600px) {
-    .cont-item-detail {
-        width: 100vw;
-        padding: 1vh;
-    }
-}
-
 .cont-item-detail .titulo {
-    color: white;
     font-family: Poppins, sans-serif;
     font-weight: bold;
     font-size: 4.5vh;
@@ -47,7 +27,6 @@
 }
 
 .cont-interno .descripcion {
-    color: white;
     font-family: Poppins, sans-serif;
     font-weight: normal;
     font-size: 3.5vh;
@@ -76,7 +55,6 @@
     justify-content: space-between;
 }
 
-
 .cont-item-detail .cont-interno .cont-info-contador .cont-precio-contador {
     height: 35%;
     width: 90%;
@@ -87,11 +65,53 @@
 
 .cont-item-detail .precio {
     font-size: 4vh;
-    color: white;
 }
-
 
 .cont-item-detail .description {
     font-size: 4vh;
-    color: white;
+}
+
+
+/* Media queries */
+@media (max-width: 1100px) {
+    .cont-item-detail {
+        width: 70vw;
+    }
+}
+@media (max-width: 750px) {
+    .cont-item-detail {
+        width: 80vw;
+        padding: 1vh;
+    }
+}
+@media (max-width: 600px) {
+
+    .cont-item-detail {
+        width: 100vw;
+        height: 88vh;
+        height: calc(100vh - var(--navbar-height));
+        padding: 1vh;
+        border-radius: 0;
+    }
+
+    .cont-item-detail .cont-interno {
+        flex-direction: column;
+        padding-top: 1vh;
+    }
+    .cont-item-detail .cont-interno .cont-img {
+        height: 65%;
+        width: 100%;
+        padding: 0 2vh;
+    }
+
+    .cont-item-detail .cont-interno .cont-info-contador {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cont-item-detail .cont-interno .cont-info-contador .cont-precio-contador {
+        align-items: center;
+        justify-content: center;
+    }
 }

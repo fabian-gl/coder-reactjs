@@ -8,6 +8,7 @@
     flex-direction: column;
     box-shadow: 0 2px 4px grey;
     font-family: Azonix;
+    z-index: 10;
 }
 
 .fila-nav-sup {

@@ -7,27 +7,14 @@ import Spinner from '../Spinner/Spinner'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import NotFound from '../NotFound/NotFound'
 
-// import { useAppContext } from '../../context/AppContext'
 import { getProductById } from '../../firebase/queries'
 
 const ItemDetailContainer = () => {
-
-    // const { getAllProducts, productos, loading } = useAppContext();
     
     const [producto, setProducto] = useState(null)
     const [loading, setLoading] = useState(false)
 
     let { productid } = useParams()
-
-    // useEffect(() => {
-    //     getAllProducts()
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [])
-
-    // useEffect( () => {
-    //     setProducto(productos.filter(producto => producto.id === productid)[0])
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // },[productid, productos])
 
     useEffect(() => {
         const getProdAsync = async () => {

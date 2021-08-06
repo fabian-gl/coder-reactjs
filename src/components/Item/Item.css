@@ -1,6 +1,7 @@
 
 .cont-item {
-    background: #dadada;
+    background: var(--cards-background);
+    color: var(--cards-text);
     height: 40vh;
     padding: 2vh;
     margin: 2vh;
@@ -13,7 +14,6 @@
 }
 
 .cont-item .titulo {
-    color: #7a7a7a;
     font-family: Poppins, sans-serif;
     font-weight: normal;
     font-size: 3.5vh;
@@ -33,5 +33,4 @@
 
 .cont-item .precio {
     font-size: 4vh;
-    color: #7a7a7a;
 }
