@@ -16,10 +16,10 @@ export const getProductsByCategory = category => {
 export const getProductById = id => {
     return new Promise((resolve, reject) => {
         const conn = getFirestoreConnection()
-        conn.collection('store').where('id', '==', id).get()
+        conn.collection('store').doc(id).get()
         .then(response => {
-            const productos = response.docs.map(doc => ({...doc.data(), id: doc.id}))
-            resolve(productos)
+            if (response.exists) resolve({...response.data(), id: response.id})
+            else resolve(null)
         })
         .catch(reject)
     })
