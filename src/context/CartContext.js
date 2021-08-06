@@ -11,11 +11,10 @@ const CartContextProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
 
     const addItem = (id, cantidad) => {
-        const idNumber = parseInt(id)
 
-        const producto = getProductFromId(idNumber)
+        const producto = getProductFromId(id)
 
-        const indexFound = cartItems.findIndex(elem => elem.id === idNumber)
+        const indexFound = cartItems.findIndex(elem => elem.id === id)
 
         if (indexFound !== -1)
         {
@@ -26,7 +25,7 @@ const CartContextProvider = ({ children }) => {
         else setCartItems([...cartItems, {...producto, cantidad: parseInt(cantidad)}])
     }
 
-    const getProductFromId = id => productos.filter(producto => parseInt(producto.id) === id)[0]
+    const getProductFromId = id => productos.filter(producto => producto.id === id)[0]
 
     const deleteItem = id => {
         setCartItems(cartItems.filter(cartItem => cartItem.id !== id))

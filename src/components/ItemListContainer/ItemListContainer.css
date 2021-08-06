@@ -8,6 +8,6 @@
 
 .cont-item-list-container .greeting {
     text-align: center;
-    text-shadow: #aaa 4px 2px 1px;
+    color: #7a7a7a;
     padding: 2vh 0;
 }

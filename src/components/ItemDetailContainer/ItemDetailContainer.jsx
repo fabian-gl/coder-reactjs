@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
     }, [])
 
     useEffect( () => {
-        setProducto(productos.filter(producto => parseInt(producto.id) === parseInt(productid))[0])
+        setProducto(productos.filter(producto => producto.id === productid)[0])
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[productid, productos])
 
