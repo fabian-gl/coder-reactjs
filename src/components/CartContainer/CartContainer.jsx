@@ -39,21 +39,19 @@ const CartContainer = () => {
     return (
         <div className='cont-cart-container'>
             <h1>Tu carrito!</h1>
-            {!cartItems.length && 
-            <>
-                <NotFound message='El carrito está vacío!' />
-                <Link className='link-volver' to='/'>Vuelve a la tienda para agregar algo!</Link>
-            </>
-            }
-            <div className={'cont-cart-item-list'}>
-                {!!cartItems.length && cartItems.map(item =><CartItem key={item.id} {...item}/>)}
-            </div>
-
-            {!!total && (
+            {cartItems.length === 0 ?
                 <>
+                    <NotFound message='El carrito está vacío!' />
+                    <Link className='link-volver' to='/'>Vuelve a la tienda para agregar algo!</Link>
+                </>
+                :
+                <>
+                    { cartItems.map(item =><CartItem key={item.id} {...item}/>)}
                     <h3 className='total'>Total: ${total}</h3>
+                    
                     <BuyerForm inputsValidated={handlePurchase}/>
-                </>)}
+                </>            
+            }
             
         </div>
     )

@@ -24,14 +24,15 @@ const BuyerForm = ({inputsValidated}) => {
 
     const handlePurchase = () => {
         const validationResult = validateInputs()
-        console.log(validationResult)
 
-        if (validationResult.valid) inputsValidated(formData)
+        if (validationResult.valid) inputsValidated({...formData, phone: stripNonNumericChars(formData.phone)})
         else {
             const msgErrors = validationResult.messages.reduce((acum, act) => acum + `• ${act}\n`, '')
             alert(msgErrors)
         }
     }
+
+    const stripNonNumericChars = phone => phone.replace(/\D/g, '')
 
     const validateInputs = () => {
         const messages = []
@@ -64,6 +65,12 @@ const BuyerForm = ({inputsValidated}) => {
         return {valid: !messages.length, messages}
     }
 
+    const onlyPhoneChars = e => {
+        const key = e.key.toUpperCase()
+        if (key === 'DELETE' || key === 'BACKSPACE') return
+        if(!/\d|\.|-/.test(e.key)) e.preventDefault()
+    }
+
     return (
         <div className="cont-buyer-form">
             <h2>Completa tus datos para finalizar tu compra</h2>
@@ -72,7 +79,7 @@ const BuyerForm = ({inputsValidated}) => {
                 <input type="text" name="name" onChange={() => {}}
                     placeholder='Nombre' value={formData.name} />
 
-                <input type="tel" name="phone" onChange={() => {}}
+                <input type="tel" name="phone" pattern="[0-9]*" onKeyDown={onlyPhoneChars} onChange={() => {}}
                     placeholder='Telefono' value={formData.phone} />
 
                 <input type="email" name="email" onChange={() => {}}
