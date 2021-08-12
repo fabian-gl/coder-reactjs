@@ -57,6 +57,5 @@
 
 .cont-contador .btn-agregar {
     width: 100%;
-    padding: 0.5vh 1vh;
-    font-weight: bold;
+    margin-top: 2vh;
 }

@@ -3,11 +3,11 @@
     background: var(--cards-background);
     color: var(--cards-text);
     width: 60vw;
-    height: 70vh;
+    height: 75vh;
     padding: 2vh;
     border-radius: 2vh;
-    /* overflow-y: scroll; */
     text-align: center;
+    overflow-y: scroll;
 }
 
 .cont-cart-container .link-volver {
@@ -16,6 +16,14 @@
     left: 0;
     width: 100%;
     text-align: center;
+}
+
+.cont-cart-container .cont-cart-item-list {
+    margin-bottom: vh;
+}
+
+.cont-cart-container .total {
+    margin: 4vh 0;
 }
 
 

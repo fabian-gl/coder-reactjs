@@ -1,0 +1,106 @@
+[33mcommit 74e4d46d2a729800e1ee9d9c5d7c14f0ec02ddeb[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mcoder/master[m[33m)[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Fri Aug 6 15:49:41 2021 -0300
+
+    Fixed responsive styles
+
+[33mcommit de89ac08ebdac581375854888b1eec8e63d639cf[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Fri Aug 6 10:58:34 2021 -0300
+
+    Added firebase calls to itemList and
+    itemDetailContainer
+
+[33mcommit c2ee4d0bb8806a3444482560f7fe92cac4878c1f[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Fri Aug 6 10:19:35 2021 -0300
+
+    Connected firebase in context with only
+     one call to getProducts
+
+[33mcommit 10eec3ddbf4426cf7564e00a1898c7c338eb67dc[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Tue Aug 3 16:29:05 2021 -0300
+
+    Added functionality to cart. Calculate
+    subtotals and total
+
+[33mcommit f605666c0cdac6cfb4d8914b36bf9eb06cfb0197[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Mon Aug 2 18:12:16 2021 -0300
+
+    Added cart context to cartWidget
+
+[33mcommit 46aa46a2b97834c73619cab65c652aa923b11e73[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Mon Aug 2 17:33:21 2021 -0300
+
+    Added context to cart and functionality
+    to delete items
+
+[33mcommit 38a5ae72e8c494e3fb8c892bdf9b7be316b61e64[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Mon Aug 2 11:35:10 2021 -0300
+
+    Added CartItem Component. Added
+    context for cart. Changed styles for navbar
+
+[33mcommit b3abe0190cecb45c4dec09289ed08a3b822b5c0a[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Wed Jul 28 11:40:06 2021 -0300
+
+    Edited readme
+
+[33mcommit 07c5a51a7dc2de85dfe9b83df70f83ca7e7d8eb6[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Wed Jul 28 11:37:20 2021 -0300
+
+    Changed readme file
+
+[33mcommit 32e04c70e6b50d57e78137f1fceffb506e5f48f9[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Wed Jul 28 11:30:34 2021 -0300
+
+    Added gif file showing navigation
+
+[33mcommit ff8858cbd5d723781cb2d8b9de5095c8d283af32[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Wed Jul 28 11:21:39 2021 -0300
+
+    Added spinner when loading. Not found element when query returns []. Added links and navlinks for navigation. Added blank cart screen
+
+[33mcommit bda97d22f8f5913d5e507a2f229e0305a80f5fef[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Tue Jul 20 18:39:31 2021 -0300
+
+    Added components ItemDetail and ItemDetailContainer. Passed the counter to the ItemDetail. Put json object for mock requests in separate file. Added some styling
+
+[33mcommit 57decdc317378e5e6a53d6a139ed2e76221abc72[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Tue Jul 20 15:21:34 2021 -0300
+
+    Added Item and ItemList components. Rearranged ItemCount inside of Item. Added async function to mock server call
+
+[33mcommit 1997047b44451c7ac4b8672d6fc31814ca143675[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Tue Jul 13 15:15:20 2021 -0300
+
+    Added ItemCount component. Went back with jsx and css files inside components folder.
+
+[33mcommit 0e448f98d2757da354e9ee27aed8101f7644c72d[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Mon Jul 12 18:52:05 2021 -0300
+
+    added ItemListContainer component, Added Logo component, refactored dummyParagraphs, Added CartWidget component, added mobile menu functionality to navbar
+
+[33mcommit 6c018a3b5075704b5e171db55be4c5319aa31551[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Wed Jul 7 00:13:39 2021 -0300
+
+    Se limpia el proyecto base de react, se agrega componente NavBar y se crea un elemento NavBarItem
+
+[33mcommit 638860d0d4c7af1237b703206098b66ebc274e4b[m
+Author: fabian-gl <64825031+fabian-gl@users.noreply.github.com>
+Date:   Wed Jun 30 21:41:08 2021 -0300
+
+    Initialize project using Create React App

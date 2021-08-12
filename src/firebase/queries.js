@@ -1,4 +1,13 @@
-import { getFirestoreConnection } from '../firebase/config';
+import { getFirestoreConnection, getFirebase } from '../firebase/config';
+
+export const getFirestoreTimestamp = () => {
+    return getFirebase().firestore.Timestamp.fromDate(new Date())
+}
+
+export const setOrder = order => {
+    const conn = getFirestoreConnection()
+    return conn.collection('orders').add(order)    
+}
 
 export const getProductsByCategory = category => {
     return new Promise((resolve, reject) => {

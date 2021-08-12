@@ -40,7 +40,7 @@ const ItemDetail = ({id, title, description, price, pictureUrl}) => {
                         <p className='precio'>${price}</p>
 
                         {( cantidadAComprar ?
-                            <button onClick={terminaLaCompra}>Terminar la compra</button>
+                            <button onClick={terminaLaCompra}>Ir al carrito</button>
                         : 
                             <ItemCount stock={4} onAdd={agregaAlCarrito}/>
                         )}
