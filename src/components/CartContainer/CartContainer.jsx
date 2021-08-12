@@ -21,7 +21,7 @@ const CartContainer = () => {
 
         const order = {
             buyer,
-            items: cartItems.map(item => ({id: item.id, title: item.title, price: item.price})),
+            items: cartItems.map(item => ({id: item.id, title: item.title, price: item.price, quantity: item.cantidad })),
             date: getFirestoreTimestamp(),
             total
         }
