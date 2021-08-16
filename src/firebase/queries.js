@@ -44,18 +44,3 @@ export const getProducts = () => {
         .catch(reject)
     })
 }
-
-export const uploadJsonToFirebase = (arrayOfObjects) => {
-    const conn = getFirestoreConnection()
-
-    for (const producto of arrayOfObjects)
-    {
-        conn.collection('store').doc().set({
-            title: producto.title,
-            description: producto.description,
-            category: producto.category,
-            price: producto.price,
-            pictureUrl: producto.pictureUrl,
-        })
-    }
-}

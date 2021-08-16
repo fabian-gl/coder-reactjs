@@ -34,7 +34,7 @@ Se usa react-router-dom para la navegación y facilitar el comportamiento SPA.
 
 Para la persistencia de datos con los productos del store, utilizo firebase/firestore.
 
-Se decide no usar una librería para manejar los estilos, por lo que es puro css aplicado a cada componente. Los estilos globales se encuentran en el archivo index.css
+Se decide no usar una librería para manejar los estilos, por lo que se usa puro css aplicado a cada componente. Los estilos globales se encuentran en el archivo index.css
 
 
 ## Sonora en funcionamiento
