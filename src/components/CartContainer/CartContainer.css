@@ -3,19 +3,29 @@
     background: var(--cards-background);
     color: var(--cards-text);
     width: 60vw;
-    height: 75vh;
-    padding: 2vh;
+    min-height: 60vh;
     border-radius: 2vh;
     text-align: center;
     overflow-y: scroll;
+    padding: 2vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .cont-cart-container .link-volver {
-    position: absolute;
     bottom: 7vh;
     left: 0;
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
+    text-decoration: none;
+    color: black;
+    background: lightgray;
+    padding: 1vh 2vh;
+    border-radius: 2vh;
+    font-weight: bold;
 }
 
 .cont-cart-container .total {

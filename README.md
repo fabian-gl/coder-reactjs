@@ -1,6 +1,6 @@
 # SONORA - Tienda de música
 
-E-commerce de instrumentos musicales
+E-commerce de instrumentos musicales.
 
 El proyecto se inició con create-react-app
 
@@ -9,11 +9,12 @@ El proyecto se inició con create-react-app
 
 Primero debes bajar los archivos a tu disco local (realizando fork y clone)
 
-Una vez que tenas los archivos en tu máquina, para instalar las dependecias, debes ejecutar
+Una vez que tenas los archivos en tu máquina, para instalar las dependecias en tu entorno local, debes ejecutar
 
 ### `npm install`
 
-Desde la terminal, dentro de la carpeta raíz del proyecto ejecutar el script
+
+Luego, desde la terminal, dentro de la carpeta raíz del proyecto ejecutar el script
 
 ### `npm start`
 
@@ -29,7 +30,11 @@ Genera todos los archivos estáticos en la carpeta "build" y al subir el conteni
 
 ## Dependencias
 
-Se usa react-router-dom para la navegación. Se decide no usar una librería para manejar el css.
+Se usa react-router-dom para la navegación y facilitar el comportamiento SPA.
+
+Para la persistencia de datos con los productos del store, utilizo firebase/firestore.
+
+Se decide no usar una librería para manejar los estilos, por lo que es puro css aplicado a cada componente. Los estilos globales se encuentran en el archivo index.css
 
 
 ## Sonora en funcionamiento

@@ -9,12 +9,14 @@ import { setOrder, getFirestoreTimestamp } from '../../firebase/queries';
 import CartItem from '../CartItem/CartItem';
 import NotFound from '../NotFound/NotFound';
 import BuyerForm from '../BuyerForm/BuyerForm';
+import SuccessfulPurchase from '../SuccessfulPurchase/SuccessfulPurchase';
 
 
 const CartContainer = () => {
-    const { cartItems } = useCartContext()
+    const { cartItems, clearItems } = useCartContext()
 
     const [total, setTotal] = useState(0)
+    const [idCompra, setIdCompra] = useState('')
 
     const handlePurchase = (formData) => {
         const {repeatEmail, ...buyer} = formData 
@@ -27,7 +29,11 @@ const CartContainer = () => {
         }
         console.log(order)
         setOrder(order)
-        .then(response => alert(`Gracias por tu compra! El ID de tu orden es ${response.id}`))
+        .then(response => {
+            setIdCompra(response.id)
+            console.log(`Gracias por tu compra! El ID de tu orden es ${response.id}`)
+            clearItems()
+        })
         .catch(error => alert(`Ocurrió un error: ${error}`))
     }
 
@@ -36,15 +42,21 @@ const CartContainer = () => {
         setTotal(totalCalculado)
     }, [cartItems])
 
+    console.log(idCompra)
     return (
         <div className='cont-cart-container'>
-            <h1>Tu carrito!</h1>
+            {!idCompra && <h1>Tu carrito!</h1>}
+
             {cartItems.length === 0 ?
                 <>
-                    <NotFound message='El carrito está vacío!' />
-                    <Link className='link-volver' to='/'>Vuelve a la tienda para agregar algo!</Link>
+                    {idCompra ?
+                        <SuccessfulPurchase purchaseId={idCompra} />
+                    :
+                        <NotFound message='El carrito está vacío!' />
+                    }
+                    <Link className='link-volver' to='/'>Vuelve a la tienda</Link>
                 </>
-                :
+            :
                 <>
                     { cartItems.map(item =><CartItem key={item.id} {...item}/>)}
                     <h3 className='total'>Total: ${total}</h3>

@@ -9,10 +9,12 @@ const CartContextProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
     const [numItems, setNumItems] = useState(0)
     
+    // Este useEffect lo uso para evitar calcular el número de items de cart en el propio
+    // CartWidget, porque lo pedía la rúbrica.
     useEffect(() => {
         setNumItems(cartItems.reduce((acum, act) => acum + act.cantidad, 0))
     }, [cartItems])
-
+    
     const addItem = (producto) => {
         
         const indexFound = cartItems.findIndex(elem => elem.id === producto.id)
@@ -28,13 +30,16 @@ const CartContextProvider = ({ children }) => {
 
     const deleteItem = id => setCartItems(cartItems.filter(cartItem => cartItem.id !== id))
 
+    const clearItems = () => setCartItems([])
+    
     return (
         <CartContext.Provider
             value={{
                 numItems,
                 cartItems,
                 addItem,
-                deleteItem
+                deleteItem,
+                clearItems
             }}>
             {children}
         </CartContext.Provider>

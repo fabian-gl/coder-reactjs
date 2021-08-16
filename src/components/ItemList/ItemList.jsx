@@ -36,7 +36,9 @@ const ItemList = () => {
         <div className='cont-item-list'>
             {loading && <Spinner />}
             {(!listaFiltrada.length && !loading) && <NotFound message='No hay productos que mostrar' />}
-            {listaFiltrada.length !== 0 && listaFiltrada.map(producto => <Item key={producto.id} {...producto} />)}
+            <div className="cont-grid">
+                {listaFiltrada.length !== 0 && listaFiltrada.map(producto => <Item key={producto.id} {...producto} />)}
+            </div>
         </div>
     )
 }

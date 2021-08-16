@@ -6,7 +6,6 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import CartContainer from './components/CartContainer/CartContainer';
-import BuyerForm from './components/BuyerForm/BuyerForm';
 
 
 function App() {
@@ -21,7 +20,6 @@ function App() {
                 <Route exact path='/category/:categoryid' component={ItemListContainer} />
                 <Route exact path='/details/:productid' component={ItemDetailContainer} />
                 <Route exact path='/cart' component={CartContainer} />
-                <Route exact path='/buyer' component={BuyerForm} />
 
               </Switch>
             </div>

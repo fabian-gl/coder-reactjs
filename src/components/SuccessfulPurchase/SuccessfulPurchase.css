@@ -1,0 +1,16 @@
+.cont-successful-purchase {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cont-successful-purchase h4 {
+    font-weight: normal;
+}
+
+.cont-successful-purchase img {
+    max-height: 35vh;
+}
