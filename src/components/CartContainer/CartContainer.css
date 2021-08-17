@@ -13,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    overflow-x: hidden;
 }
 
 .cont-cart-container .link-volver {

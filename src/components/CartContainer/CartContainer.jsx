@@ -10,12 +10,14 @@ import CartItem from '../CartItem/CartItem';
 import NotFound from '../NotFound/NotFound';
 import BuyerForm from '../BuyerForm/BuyerForm';
 import SuccessfulPurchase from '../SuccessfulPurchase/SuccessfulPurchase';
+import Spinner from '../Spinner/Spinner';
 
 
 const CartContainer = () => {
     const { cartItems, clearItems } = useCartContext()
 
     const [total, setTotal] = useState(0)
+    const [loading, setLoading] = useState(false)
     const [idCompra, setIdCompra] = useState('')
 
     const handlePurchase = (formData) => {
@@ -27,14 +29,14 @@ const CartContainer = () => {
             date: getFirestoreTimestamp(),
             total
         }
-        console.log(order)
+        setLoading(true)
         setOrder(order)
         .then(response => {
             setIdCompra(response.id)
-            console.log(`Gracias por tu compra! El ID de tu orden es ${response.id}`)
             clearItems()
         })
         .catch(error => alert(`Ocurrió un error: ${error}`))
+        .finally(() => setLoading(false))
     }
 
     useEffect(() => {
@@ -42,7 +44,6 @@ const CartContainer = () => {
         setTotal(totalCalculado)
     }, [cartItems])
 
-    console.log(idCompra)
     return (
         <div className='cont-cart-container'>
             {!idCompra && <h1>Tu carrito!</h1>}
@@ -58,11 +59,16 @@ const CartContainer = () => {
                 </>
             :
                 <>
-                    { cartItems.map(item =><CartItem key={item.id} {...item}/>)}
-                    <h3 className='total'>Total: ${total}</h3>
-                    
-                    <BuyerForm inputsValidated={handlePurchase}/>
-                </>            
+                    { loading ? 
+                        <Spinner />
+                        :
+                        <>
+                            { cartItems.map(item =><CartItem key={item.id} {...item}/>)}
+                            <h3 className='total'>Total: ${total}</h3>
+                            <BuyerForm inputsValidated={handlePurchase}/>
+                        </>
+                    }
+                </>          
             }
             
         </div>

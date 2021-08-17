@@ -35,9 +35,15 @@ const ItemDetailContainer = () => {
 
     return (
         <div className='cont-item-detail-container'>
-            {loading && <Spinner />}
-            {(!producto && !loading)&& <NotFound message='No existe ese producto...' />}
-            {producto && <ItemDetail {...producto} />}
+            { loading ?
+                <Spinner />
+            :
+                (producto ? 
+                    <ItemDetail {...producto} />
+                :
+                    <NotFound message='No existe ese producto...' />
+                )
+            }
         </div>
     )
 }
