@@ -2,6 +2,9 @@
     position: relative;
     height: 70vh;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cont-item-list .cont-grid {

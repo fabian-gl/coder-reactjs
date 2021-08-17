@@ -20,9 +20,7 @@ const ItemDetail = ({id, title, description, price, pictureUrl}) => {
         addItem({id, title, description, price, pictureUrl, cantidad})
     }
 
-    const terminaLaCompra = () => {
-        history.push('/cart')
-    }
+    const terminaLaCompra = () => history.push('/cart')
 
     return (
         <div className='cont-item-detail'>
@@ -39,11 +37,11 @@ const ItemDetail = ({id, title, description, price, pictureUrl}) => {
                     <div className="cont-precio-contador">
                         <p className='precio'>${price}</p>
 
-                        {( cantidadAComprar ?
+                        { cantidadAComprar ?
                             <button onClick={terminaLaCompra}>Ir al carrito</button>
                         : 
                             <ItemCount stock={4} onAdd={agregaAlCarrito}/>
-                        )}
+                        }
                         
                     </div>
                 </div>

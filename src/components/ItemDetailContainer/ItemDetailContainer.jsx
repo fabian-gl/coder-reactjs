@@ -22,7 +22,6 @@ const ItemDetailContainer = () => {
             setLoading(true)
             try {
                 setProducto(await getProductById(productid))
-
             } catch (error) {
                 alert('Hubo un problema al conectarse con la base de datos', error)
             }
@@ -38,7 +37,7 @@ const ItemDetailContainer = () => {
             { loading ?
                 <Spinner />
             :
-                (producto ? 
+                ( producto ? 
                     <ItemDetail {...producto} />
                 :
                     <NotFound message='No existe ese producto...' />

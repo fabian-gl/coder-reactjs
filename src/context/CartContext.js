@@ -8,7 +8,6 @@ const CartContextProvider = ({ children }) => {
 
     const [cartItems, setCartItems] = useState([]);
     
-    
     const addItem = (producto) => {
         
         const indexFound = cartItems.findIndex(elem => elem.id === producto.id)

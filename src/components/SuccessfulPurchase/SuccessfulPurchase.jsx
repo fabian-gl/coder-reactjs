@@ -1,4 +1,5 @@
 import './SuccessfulPurchase.css'
+
 import greenTick from '../../assets/green-tick.png'
 
 const SuccessfulPurchase = ({purchaseId}) => {
