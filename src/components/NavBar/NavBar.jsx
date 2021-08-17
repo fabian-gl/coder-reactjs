@@ -4,8 +4,20 @@ import NavBarItem from '../NavBarItem/NavBarItem'
 import Logo from '../Logo/Logo'
 import CartWidget from '../CartWidget/CartWidget'
 
+import { useState, useEffect } from 'react'
+import { useCartContext } from '../../context/CartContext'
+
+
 const NavBar = () => {
+    const { cartItems } = useCartContext()
+
     const menu = ['CUERDA', 'VIENTO', 'PERCUSION']
+
+    const [numItems, setNumItems] = useState(0)
+
+    useEffect(() => {
+        setNumItems(cartItems.reduce((acum, act) => acum + act.cantidad, 0))
+    }, [cartItems])
 
     const toggleMenuCelu = () => document.querySelector('.menu-celu').classList.toggle('oculto')
 
@@ -34,7 +46,7 @@ const NavBar = () => {
 
                 </div>
                 <div className="cont-derecho">
-                    <CartWidget />
+                    <CartWidget numItems={numItems} />
                 </div>
             </div>
             <div>

@@ -1,12 +1,9 @@
 import './CartWidget.css'
 
 import cartIcon from '../../assets/icon-cart.png'
-import { useCartContext } from '../../context/CartContext'
-
 import { Link } from 'react-router-dom'
 
-const CartWidget = () => {
-    const { numItems } = useCartContext();
+const CartWidget = ({numItems}) => {
 
     return (
         <Link to='/cart'>

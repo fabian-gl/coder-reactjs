@@ -39,4 +39,4 @@ Se decide no usar una librería para manejar los estilos, por lo que se usa puro
 
 ## Sonora en funcionamiento
 
-Descargar gif: [Sonora - Tienda de Música](https://github.com/fabian-gl/coder-reactjs/blob/master/gif-funcionamiento/SONORA%20-%20Tienda%20de%20Musica.gif)
+Descargar gif: [Sonora - Tienda de Música](https://github.com/fabian-gl/coder-reactjs/blob/master/gif-funcionamiento/SONORA%20-%20Tienda%20de%20Musica%20-%20Entrega%20Final.gif)

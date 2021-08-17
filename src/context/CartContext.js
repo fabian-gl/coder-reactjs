@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const CartContext = createContext();
 
@@ -7,13 +7,7 @@ export const useCartContext = () => useContext(CartContext);
 const CartContextProvider = ({ children }) => {
 
     const [cartItems, setCartItems] = useState([]);
-    const [numItems, setNumItems] = useState(0)
     
-    // Este useEffect lo uso para evitar calcular el número de items de cart
-    // en el propio CartWidget, porque lo pedía la rúbrica.
-    useEffect(() => {
-        setNumItems(cartItems.reduce((acum, act) => acum + act.cantidad, 0))
-    }, [cartItems])
     
     const addItem = (producto) => {
         
@@ -35,7 +29,6 @@ const CartContextProvider = ({ children }) => {
     return (
         <CartContext.Provider
             value={{
-                numItems,
                 cartItems,
                 addItem,
                 deleteItem,
